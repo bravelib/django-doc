@@ -131,12 +131,16 @@ ALTER TABLE "polls_choice"
 COMMIT;
 ~~~
 
-可以运行python manage.py check；它会检查你的项目中的模型是否存在问题，而不用执行迁移或者接触数据库。
+可以运行python manage.py check
+它会检查你的项目中的模型是否存在问题，而不用执行迁移或者接触数据库。
 
 运行migrate以在你的数据库中创建模型所对应的表：
 
 ~~~
 python manage.py migrate
+~~~
+
+~~~
 Operations to perform:
   Synchronize unmigrated apps: staticfiles, messages
   Apply all migrations: admin, contenttypes, polls, auth, sessions

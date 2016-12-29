@@ -17,7 +17,7 @@ from django.contrib import admin
 
 from .models import Question
 
-class QuestionField(admin.ModelAdmin):
+class QuestionAdmin(admin.ModelAdmin):
 	#fields 表示字段排序
     fields = ['pub_date', 'question_text']
     #fieldsets其中第一个字段表示标题
@@ -27,5 +27,5 @@ class QuestionField(admin.ModelAdmin):
         ('Date information', {'fields': ['pub_date'],'classes': ['collapse']}),
     ]
 
-admin.site.register(Question, QuestionField)
+admin.site.register(Question, QuestionAdmin)
 ~~~
